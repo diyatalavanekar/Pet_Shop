@@ -14,7 +14,6 @@
             background-color: #f8f9fa;
         }
 
-        /* Theme colors */
         .theme-bg {
             background-color: rgb(48, 47, 81);
         }
@@ -33,14 +32,12 @@
             color: white;
         }
 
-        /* Carousel images */
         .carousel-img {
             width: 100%;
             height: 500px;
             object-fit: cover;
         }
 
-        /* Product images */
         .product-img {
             width: 100%;
             height: 250px;
@@ -58,6 +55,32 @@
             border-radius: 15px;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
         }
+
+        /* Inner dropdown styling */
+        .dropdown-submenu {
+            position: relative;
+        }
+
+        .dropdown-submenu .dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-left: 0.1rem;
+        }
+
+        .dropdown-submenu {
+            position: relative;
+        }
+
+        .dropdown-submenu .dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-left: 0.1rem;
+            display: none;
+        }
+
+        .dropdown-submenu:hover .dropdown-menu {
+            display: block;
+        }
     </style>
 </head>
 
@@ -74,10 +97,41 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+
+                    <!-- Main Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Categories
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Dogs</a></li>
+                            <li><a class="dropdown-item" href="#">Cats</a></li>
+
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">More Pets</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Fish</a></li>
+                                    <li><a class="dropdown-item" href="#">Hamster</a></li>
+                                    <li><a class="dropdown-item" href="#">Rabbit</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+
                 </ul>
             </div>
         </div>
@@ -122,33 +176,39 @@
 
             <div class="col-md-4">
                 <div class="card shadow h-100">
-                    <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee" class="product-img">
+                    <a href="https://www.pedigree.in" target="_blank">
+                        <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee" class="product-img">
+                    </a>
                     <div class="card-body text-center">
                         <h5 class="card-title">Premium Dog Food</h5>
                         <p class="card-text">Healthy meals for your happy pup.</p>
-                        <a href="#" class="btn btn-theme">Buy Now</a>
+                        <a href="https://www.pedigree.in" target="_blank" class="btn btn-theme">Buy Now</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4">
                 <div class="card shadow h-100">
-                    <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006" class="product-img">
+                    <a href="https://www.whiskas.in" target="_blank">
+                        <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006" class="product-img">
+                    </a>
                     <div class="card-body text-center">
                         <h5 class="card-title">Cat Toys</h5>
                         <p class="card-text">Fun and playful toys for your kitty.</p>
-                        <a href="#" class="btn btn-theme">Buy Now</a>
+                        <a href="https://www.whiskas.in" target="_blank" class="btn btn-theme">Buy Now</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4">
                 <div class="card shadow h-100">
-                    <img src="https://images.unsplash.com/photo-1522926193341-e9ffd686c60f" class="product-img">
+                    <a href="https://zupreem.com" target="_blank">
+                        <img src="https://images.unsplash.com/photo-1522926193341-e9ffd686c60f" class="product-img">
+                    </a>
                     <div class="card-body text-center">
                         <h5 class="card-title">Bird Supplies</h5>
                         <p class="card-text">Everything your little bird needs.</p>
-                        <a href="#" class="btn btn-theme">Buy Now</a>
+                        <a href="https://zupreem.com" target="_blank" class="btn btn-theme">Buy Now</a>
                     </div>
                 </div>
             </div>
